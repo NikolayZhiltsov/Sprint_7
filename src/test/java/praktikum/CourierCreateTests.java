@@ -28,14 +28,7 @@ public class CourierCreateTests extends AbstractTest{
     public void shouldReturnStatusCode201() {
         courierSteps
                 .createCourier(courier)
-                .statusCode(201);
-    }
-
-    @Test
-    @DisplayName("Проверяем тело ответа успешного создания курьера")
-    public void shouldReturnOkTrue() {
-        courierSteps
-                .createCourier(courier)
+                .statusCode(201)
                 .body("ok", Matchers.is(true));
     }
 
